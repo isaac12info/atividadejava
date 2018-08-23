@@ -1,0 +1,31 @@
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Insertion {
+
+    public static void main(String[] args) {
+        Scanner tcl = new Scanner(System.in);
+
+        int tam = tcl.nextInt();
+        int vet[] = new int[tam];
+
+        for (int i = 0; i < vet.length; i++) {
+            vet[i] = tcl.nextInt();
+        }
+
+        for (int i = 1; i < vet.length; i++) {
+
+            int aux = vet[i];
+            int j = i;
+
+            while ((j > 0) && (vet[j - 1] > aux)) {
+                vet[j] = vet[j - 1];
+                j -= 1;
+            }
+            vet[j] = aux;
+
+        }
+        System.out.println(Arrays.toString(vet));
+    }
+}
