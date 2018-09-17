@@ -1,0 +1,27 @@
+QUESTÃO 02
+
+import java.util.Scanner;
+
+
+public class Ques02 {
+
+    public static void main(String[] args) {
+        Scanner tcl = new Scanner(System.in);
+        int a = tcl.nextInt();
+        int b = tcl.nextInt();
+        
+        if(a < b){
+            while(a < b - 1){
+                a++;
+                System.out.println(a +"/t");
+            }
+        }
+        if(b < a){
+            while(b < a - 1){
+                b++;
+                System.out.println(b +"/t");
+            }
+        }
+    }
+    
+}
